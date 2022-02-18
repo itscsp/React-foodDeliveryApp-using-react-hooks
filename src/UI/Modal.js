@@ -7,7 +7,7 @@
 //  for creating background shadow effect
 
  const Backdrop = (props) => {
-    return <div className={classes.backdrop}></div>
+    return <div className={classes.backdrop} onClick={ () => props.displayHandler(false)}></div>
  };
 
  const ModalOverlay = (props) => {
@@ -24,7 +24,7 @@
  const Modal = (porps) => {
    return (
      <Fragment>
-         {ReactDOM.createPortal(<Backdrop />, portalElements)}
+         {ReactDOM.createPortal(<Backdrop displayHandler={porps.displayHandler} />, portalElements)}
 
          {ReactDOM.createPortal(
              <ModalOverlay>{porps.children}</ModalOverlay>, portalElements
