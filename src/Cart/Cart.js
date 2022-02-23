@@ -40,7 +40,7 @@ const Cart = (props) => {
 
       <div className={classes.total}>
         <span>Total Amount</span>
-        <span>{totalAmount}</span>
+        <span>₹{totalAmount}</span>
       </div>
       <div className={classes.actions}>
         <button
